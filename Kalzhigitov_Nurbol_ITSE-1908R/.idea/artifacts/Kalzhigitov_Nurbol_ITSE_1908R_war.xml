@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Kalzhigitov_Nurbol_ITSE-1908R:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>Kalzhigitov_Nurbol_ITSE-1908R</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="Kalzhigitov_Nurbol_ITSE-1908Rl-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Kalzhigitov_Nurbol_ITSE-1908R:war exploded" />
+    </root>
+  </artifact>
+</component>

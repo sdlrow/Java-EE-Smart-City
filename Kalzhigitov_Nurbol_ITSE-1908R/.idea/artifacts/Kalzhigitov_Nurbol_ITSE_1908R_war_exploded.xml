@@ -1,0 +1,80 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Kalzhigitov_Nurbol_ITSE-1908R:war exploded">
+    <output-path>$PROJECT_DIR$/target/Kalzhigitov_Nurbol_ITSE-1908Rl-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>Kalzhigitov_Nurbol_ITSE-1908R</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Kalzhigitov_Nurbol_ITSE-1908R" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-frontend-jaxrs:3.4.4" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-core:3.4.4" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.4" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:txw2:2.3.4" />
+          <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:3.0.12" />
+          <element id="library" level="project" name="Maven: com.fasterxml.woodstox:woodstox-core:6.2.6" />
+          <element id="library" level="project" name="Maven: org.codehaus.woodstox:stax2-api:4.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.ws.xmlschema:xmlschema-core:2.2.5" />
+          <element id="library" level="project" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.3" />
+          <element id="library" level="project" name="Maven: jakarta.ws.rs:jakarta.ws.rs-api:2.1.6" />
+          <element id="library" level="project" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-transports-http:3.4.4" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-security:3.4.4" />
+          <element id="library" level="project" name="Maven: jakarta.xml.ws:jakarta.xml.ws-api:2.3.3" />
+          <element id="library" level="project" name="Maven: jakarta.jws:jakarta.jws-api:2.1.0" />
+          <element id="library" level="project" name="Maven: jakarta.xml.soap:jakarta.xml.soap-api:1.4.2" />
+          <element id="library" level="project" name="Maven: jakarta.activation:jakarta.activation-api:1.2.2" />
+          <element id="library" level="project" name="Maven: com.sun.activation:jakarta.activation:1.2.2" />
+          <element id="library" level="project" name="Maven: com.sun.xml.messaging.saaj:saaj-impl:1.5.3" />
+          <element id="library" level="project" name="Maven: org.jvnet.staxex:stax-ex:1.8.3" />
+          <element id="library" level="project" name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.rmi:jboss-rmi-api_1.0_spec:1.0.6.Final" />
+          <element id="library" level="project" name="Maven: org.glassfish.jersey.media:jersey-media-json-jackson:3.0.3" />
+          <element id="library" level="project" name="Maven: org.glassfish.jersey.core:jersey-common:3.0.3" />
+          <element id="library" level="project" name="Maven: jakarta.inject:jakarta.inject-api:2.0.0" />
+          <element id="library" level="project" name="Maven: org.glassfish.hk2:osgi-resource-locator:1.0.3" />
+          <element id="library" level="project" name="Maven: org.glassfish.jersey.ext:jersey-entity-filtering:3.0.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.12.2" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.3.1" />
+          <element id="library" level="project" name="Maven: javax.activation:javax.activation-api:1.2.0" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:eclipselink:2.7.9" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:jakarta.persistence:2.2.3" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.13.jre7" />
+          <element id="library" level="project" name="Maven: com.github.dblock.waffle:waffle-jna:1.8.1" />
+          <element id="library" level="project" name="Maven: net.java.dev.jna:jna:4.2.1" />
+          <element id="library" level="project" name="Maven: net.java.dev.jna:jna-platform:4.2.1" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.14" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:19.0" />
+          <element id="library" level="project" name="Maven: org.osgi:org.osgi.core:4.3.1" />
+          <element id="library" level="project" name="Maven: org.osgi:org.osgi.enterprise:4.2.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.10.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.10.0" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.22" />
+          <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt:0.7.0" />
+          <element id="library" level="project" name="Maven: junit:junit:4.12" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.2" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.17.0" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.17.0" />
+          <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.9.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/Kalzhigitov_Nurbol_ITSE-1908Rl-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="Kalzhigitov_Nurbol_ITSE-1908R/web/Web" />
+    </root>
+  </artifact>
+</component>
