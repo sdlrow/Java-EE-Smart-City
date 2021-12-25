@@ -3,10 +3,12 @@ package Nurbol.Security;
 import Nurbol.Entities.User;
 import Nurbol.Services.UserService;
 
+import javax.annotation.Priority;
 import javax.annotation.security.DenyAll;
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
+import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.container.ResourceInfo;
@@ -21,8 +23,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Provider
-//@JWTAuthed
-//@Priority(Priorities.AUTHENTICATION)
+@JWTAuthed
+@Priority(Priorities.AUTHENTICATION)
 public class JWTAuthedFilter implements ContainerRequestFilter {
     @Context
     private ResourceInfo resourceInfo;
@@ -38,18 +40,23 @@ public class JWTAuthedFilter implements ContainerRequestFilter {
         String token = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
         Method method = resourceInfo.getResourceMethod();
         //Access allowed for all
-        System.out.println("JSJSJSJSJSJ");
+        System.out.println("JSJSJSJSJSJ--------------------");
         if (!method.isAnnotationPresent(PermitAll.class)) {
-            //Access denied for all
+            System.out.println("JSJSJSJSJSJ--------------------");
             if (method.isAnnotationPresent(DenyAll.class)) {
                 requestContext.abortWith(Response.status(Response.Status.FORBIDDEN)
                         .entity("Access blocked for all users !!").build());
                 return;
             }
+                System.out.println("JSJSJSJSJSJ--------------------");
             String payload = "";
             try {
                 token = token.split(" ")[1];
+
                 payload = jwtService.valid(token);
+                System.out.println(payload);
+
+
             } catch (Exception e) {
                 requestContext
                         .abortWith(Response.status(Response.Status.UNAUTHORIZED)
@@ -67,11 +74,11 @@ public class JWTAuthedFilter implements ContainerRequestFilter {
             String[] parts = payload.split(",");
 
 
-            System.out.println();
-            System.out.println();
-            username = parts[0].split(":")[1].substring(1, parts[0].split(":")[1].length()-1);
-            password = parts[1].split(":")[1].substring(1,parts[0].split(":")[1].length()-1);
-
+            username = parts[0].split(":")[1];
+            password = parts[1].split(":")[1];
+            username = username.substring(1, username.length() - 1);
+            password = password.substring(1, password.length() - 1);
+            System.out.println(password);
             //
             } catch (Exception e) {
                 requestContext

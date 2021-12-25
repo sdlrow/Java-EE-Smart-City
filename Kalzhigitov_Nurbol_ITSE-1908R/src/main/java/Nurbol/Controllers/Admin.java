@@ -39,6 +39,7 @@ public class Admin implements ExceptionMapper {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Logging
+    @RolesAllowed({"ADMIN"})
     public Response admin() {
         return Response.ok().entity("Welcome Admin").build();
     }
@@ -47,6 +48,7 @@ public class Admin implements ExceptionMapper {
     @Path("/deleteBuilding/{Id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Logging
+    @RolesAllowed({"ADMIN"})
     public Response deleteBuilding(
             @DefaultValue("0")
             @PathParam("Id") int Id){
@@ -59,6 +61,7 @@ public class Admin implements ExceptionMapper {
     @Path("/deleteUser/{Id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Logging
+    @RolesAllowed({"ADMIN"})
     public Response deleteUser(
             @DefaultValue("0")
             @PathParam("Id") int id){
@@ -72,6 +75,7 @@ public class Admin implements ExceptionMapper {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.TEXT_PLAIN)
     @Logging
+    @RolesAllowed({"ADMIN"})
     public Response sendMessage(String text) throws JMSException {
 
         message.sendMessage(text);
@@ -84,6 +88,7 @@ public class Admin implements ExceptionMapper {
     @Path("/receiveAllMessage")
     @Produces("application/json")
     @Logging
+    @RolesAllowed({"ADMIN"})
     public Response getAllMessage() throws JMSException {
         List<String> receiveAllMessage = message.receiveAll();
         return  Response.ok()
@@ -97,6 +102,7 @@ public class Admin implements ExceptionMapper {
     @Path("/getAllBuildings")
     @Produces(MediaType.APPLICATION_JSON)
     @Logging
+    @RolesAllowed({"ADMIN"})
     public Response getAllBuildings() {
         List<Building> buildings = buildingService.getAllBuildings();
         return Response.ok().entity(buildings).build();
@@ -109,6 +115,7 @@ public class Admin implements ExceptionMapper {
     @Path("/updatePassowrd/{id}")
     @Produces(MediaType.TEXT_PLAIN)
     @Logging
+    @RolesAllowed({"ADMIN"})
     public Response updateUserPassword(@DefaultValue("0")
                                            @PathParam("id") int id, String newPassword){
         User user = userService.getUserById((long) id);
@@ -125,6 +132,7 @@ public class Admin implements ExceptionMapper {
     @Path("/updatePasswordByLogin/{login}")
     @Produces(MediaType.TEXT_PLAIN)
     @Logging
+    @RolesAllowed({"ADMIN"})
     public Response updateUserPasswordByLogin(@PathParam("login") String login, String newPassword){
         User user = userService.getUserByLogin(login);
         if (user.getRole().getName() == ERole.Admin){

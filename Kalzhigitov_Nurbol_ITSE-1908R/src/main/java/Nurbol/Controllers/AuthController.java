@@ -64,10 +64,13 @@ public class AuthController implements ExceptionMapper {
     public Response JWTCheck(String JWT) {
 
         String JWT_check = jwtService.valid(JWT);
+        System.out.println(JWT_check);
         if(!(JWT_check == "not valid")) {
             String[] parts = JWT_check.split(",");
-            String username = parts[0].split(":")[1].substring(1, parts[0].split(":")[1].length() - 1);
-            String password = parts[1].split(":")[1].substring(1, parts[0].split(":")[1].length() - 1);
+            String username = parts[0].split(":")[1];
+            String password = parts[1].split(":")[1];
+            username = username.substring(1, username.length() - 1);
+            password = password.substring(1, password.length() - 1);
             System.out.println(username);
             System.out.println(password);
             return Response.ok().entity(username + " " + password).build();

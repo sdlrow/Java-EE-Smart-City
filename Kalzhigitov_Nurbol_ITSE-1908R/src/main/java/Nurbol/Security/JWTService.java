@@ -35,15 +35,19 @@ public class JWTService {
     public String valid(String token) {
         System.out.println(token);
         System.out.println(validJWTTokens);
+
         if (!this.validJWTTokens.contains(token)) {
 //            throw new RuntimeException("Token is not valid anymore");
             return "not valid";
         }
+        System.out.println("=================================================");
         Base64.Decoder decoder = Base64.getDecoder();
 //      JwtParser signed = Jwts.parser().setSigningKey(secret);
         String[] chunks = token.split("\\.");
         String header = new String(decoder.decode(chunks[0]));
         String payload = new String(decoder.decode(chunks[1]));
+        System.out.println(header);
+        System.out.println(payload);
 
         return payload;
 //        String data = signed.parseClaimsJws(token).getBody().getSubject();
